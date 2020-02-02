@@ -1,0 +1,23 @@
+* {
+  box-sizing: border-box;
+}
+
+nav,
+footer {
+  padding: 1% 0;
+  background-color: #aaa;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+.App__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 15px;
+}
