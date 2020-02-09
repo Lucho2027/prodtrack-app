@@ -1,0 +1,7 @@
+.daily-summary {
+	display: flex;
+	border: 1px black dashed;
+}
+p {
+	font-size: 10px;
+}

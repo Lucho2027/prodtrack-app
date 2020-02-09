@@ -1,28 +1,22 @@
 nav {
 	padding: 1% 0;
 	background-color: #aaa;
-}
-nav {
 	position: fixed;
-	display: flex;
-	flex-direction: row;
-	justify-content: rights;
 	top: 0;
 	left: 0;
 	right: 0;
 	z-index: 10;
-	text-decoration: none;
 }
-
-.nav-bar {
+ul.nav-bar {
+	display: flex;
 	flex-direction: row;
-	text-decoration: none;
-	list-style: none;
-	text-decoration: none;
+	justify-content: right;
+	padding-left: 0%;
 }
 li > a {
 	text-decoration: none;
 }
 li {
+	list-style: none;
 	padding: 10px;
 }

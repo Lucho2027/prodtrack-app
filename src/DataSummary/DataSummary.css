@@ -1,0 +1,7 @@
+.data-summary {
+	padding-top: 20%;
+}
+.data-item {
+	display: flex;
+	flex-direction: column;
+}

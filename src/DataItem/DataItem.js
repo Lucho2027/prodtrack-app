@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-
+import "./DataItem.css"
 export default class DataItem extends Component {
 	render() {
 		const item = this.props.item
@@ -15,11 +15,13 @@ export default class DataItem extends Component {
 		}
 		let eff = (totalProduced / totalGoal) * 100
 		return (
-			<div>
-				<div>Goal {totalGoal} </div>
-				<div> Produced {totalProduced}</div>
-				<div> Downtime {totalDowntime}</div>
-				<div>Efficiency {eff}</div>
+			<div className="daily-summary">
+				<p className="date">Date</p>
+				<p className="department">Department 3620</p>
+				<p className="goal">Goal {totalGoal} </p>
+				<p className="produced"> Produced {totalProduced}</p>
+				<p className="downtime"> Downtime {totalDowntime}</p>
+				<p className="efficiency">Efficiency {eff}</p>
 			</div>
 		)
 	}
