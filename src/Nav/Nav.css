@@ -1,14 +1,28 @@
 nav {
-  padding: 1% 0;
-  background-color: #aaa;
+	padding: 1% 0;
+	background-color: #aaa;
 }
 nav {
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 10;
-  text-decoration: none;
+	position: fixed;
+	display: flex;
+	flex-direction: row;
+	justify-content: rights;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 10;
+	text-decoration: none;
+}
+
+.nav-bar {
+	flex-direction: row;
+	text-decoration: none;
+	list-style: none;
+	text-decoration: none;
+}
+li > a {
+	text-decoration: none;
+}
+li {
+	padding: 10px;
 }
