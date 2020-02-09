@@ -207,6 +207,10 @@ export default class DataEntryForm extends Component {
 							<label htmlfor="data-title">Hourly Recording </label>
 						</div>
 						<label htmlfor="date">Date</label> <input type="date" name="date" />
+						<label htmlfor="department">Department</label>{" "}
+						<input type="number" name="department" />
+						<label htmlfor="shift">shift</label>{" "}
+						<input type="number" name="shift" min={1} max={3} />
 						<div className="table-headers">
 							<h3>Goal (units)</h3>
 							<h3>Produced (units)</h3>
