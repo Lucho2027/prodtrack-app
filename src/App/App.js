@@ -7,8 +7,10 @@ import DataSummary from "../DataSummary/DataSummary"
 import DataEntryForm from "../DataEntryForm/DataEntryForm"
 import LandingPage from "../LandingPage/LandingPage"
 import ProdtrackContext from "../ProdtrackContext"
+import config from "../config"
 import "./App.css"
 import ProdTrackErrorBoundary from "../ProdTrackErrorBoundary"
+import EditDataEntry from "../EditDataEntry/EditDataEntry.js"
 
 export default class Apps extends Component {
 	state = {
@@ -41,6 +43,26 @@ export default class Apps extends Component {
 		})
 	}
 
+	componentDidMount() {
+		fetch(config.API_ENDPOINT, {
+			method: "GET",
+			headers: {
+				"content-type": "application/json"
+			}
+		})
+			.then(res => {
+				if (!res.ok) {
+					return res.json().then(error => Promise.reject(error))
+				}
+				return res.json()
+			})
+			.then(this.setData)
+			.catch(error => {
+				console.log(error)
+				this.setState({ error })
+			})
+	}
+
 	render() {
 		const contextValue = {
 			data: this.state.data,
@@ -63,6 +85,7 @@ export default class Apps extends Component {
 							<Route path="/signup" component={SignUp} />
 							<Route path="/dataentry" component={DataEntryForm} />
 							<Route path="/datasummary" component={DataSummary} />
+							<Route path="/editdataentry/:id" component={EditDataEntry} />
 						</ProdTrackErrorBoundary>
 					</main>
 				</ProdtrackContext.Provider>

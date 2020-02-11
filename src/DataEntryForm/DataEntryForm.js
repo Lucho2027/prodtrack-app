@@ -67,38 +67,38 @@ export default class DataEntryForm extends Component {
 		const data = {
 			date: date.value,
 			department: department.value,
-			shift: shift.value,
-			goal_1: goal_1.value,
-			produced_1: produced_1.value,
-			downtime_1: downtime_1.value,
+			shift: parseInt(shift.value),
+			goal_1: parseInt(goal_1.value),
+			produced_1: parseInt(produced_1.value),
+			downtime_1: parseInt(downtime_1.value),
 			reason_1: reason_1.value,
-			goal_2: goal_2.value,
-			produced_2: produced_2.value,
-			downtime_2: downtime_2.value,
+			goal_2: parseInt(goal_2.value),
+			produced_2: parseInt(produced_2.value),
+			downtime_2: parseInt(downtime_2.value),
 			reason_2: reason_2.value,
-			goal_3: goal_3.value,
-			produced_3: produced_3.value,
-			downtime_3: downtime_3.value,
+			goal_3: parseInt(goal_3.value),
+			produced_3: parseInt(produced_3.value),
+			downtime_3: parseInt(downtime_3.value),
 			reason_3: reason_3.value,
-			goal_4: goal_4.value,
-			produced_4: produced_4.value,
-			downtime_4: downtime_4.value,
+			goal_4: parseInt(goal_4.value),
+			produced_4: parseInt(produced_4.value),
+			downtime_4: parseInt(downtime_4.value),
 			reason_4: reason_4.value,
-			goal_5: goal_5.value,
-			produced_5: produced_5.value,
-			downtime_5: downtime_5.value,
+			goal_5: parseInt(goal_5.value),
+			produced_5: parseInt(produced_5.value),
+			downtime_5: parseInt(downtime_5.value),
 			reason_5: reason_5.value,
-			goal_6: goal_6.value,
-			produced_6: produced_6.value,
-			downtime_6: downtime_6.value,
+			goal_6: parseInt(goal_6.value),
+			produced_6: parseInt(produced_6.value),
+			downtime_6: parseInt(downtime_6.value),
 			reason_6: reason_6.value,
-			goal_7: goal_7.value,
-			produced_7: produced_7.value,
-			downtime_7: downtime_7.value,
+			goal_7: parseInt(goal_7.value),
+			produced_7: parseInt(produced_7.value),
+			downtime_7: parseInt(downtime_7.value),
 			reason_7: reason_7.value,
-			goal_8: goal_8.value,
-			produced_8: produced_8.value,
-			downtime_8: downtime_8.value,
+			goal_8: parseInt(goal_8.value),
+			produced_8: parseInt(produced_8.value),
+			downtime_8: parseInt(downtime_8.value),
 			reason_8: reason_8.value
 		}
 		this.setState({ error: null })
@@ -169,15 +169,20 @@ export default class DataEntryForm extends Component {
 		let list = []
 		for (i = 1; i < 9; i++) {
 			list.push(
-				<div className="form-section">
-					<label htmlfor="production-hour"> {[i]} </label>
+				<div key={i} className="form-section">
+					<label key={i} htmlFor="production-hour">
+						{" "}
+						{[i]}{" "}
+					</label>
 					<input
+						key="goal-hour"
 						className="goal"
 						type="number"
 						name={"goal_" + i}
 						value="263"
-					/>{" "}
+					/>
 					<input
+						key="produced-hour"
 						className="produced"
 						type="number"
 						name={"produced_" + i}
@@ -185,12 +190,20 @@ export default class DataEntryForm extends Component {
 						onChange={e => this.onChange(e, i)}
 					/>{" "}
 					<input
+						key="downtime-hour"
 						className="downtime"
 						type="number"
 						name={"downtime_" + [i]}
 						placeholder="10"
 						min="0"
 						max="60"
+					/>
+					<input
+						key="reason-hour"
+						className="reason"
+						type="text"
+						name={"reason_" + [i]}
+						placeholder="Downtime Reason"
 					/>
 				</div>
 			)
@@ -204,12 +217,13 @@ export default class DataEntryForm extends Component {
 				<section>
 					<form id="record-porduction" onSubmit={this.onSubmit}>
 						<div className="form-section">
-							<label htmlfor="data-title">Hourly Recording </label>
+							<label htmlFor="data-title">Hourly Recording </label>
 						</div>
-						<label htmlfor="date">Date</label> <input type="date" name="date" />
-						<label htmlfor="department">Department</label>{" "}
+						<label htmlFor="date">Date</label>{" "}
+						<input required type="date" name="date" />
+						<label htmlFor="department">Department</label>{" "}
 						<input type="number" name="department" />
-						<label htmlfor="shift">shift</label>{" "}
+						<label htmlFor="shift">shift</label>{" "}
 						<input type="number" name="shift" min={1} max={3} />
 						<div className="table-headers">
 							<h3>Goal (units)</h3>
