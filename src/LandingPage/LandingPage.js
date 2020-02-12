@@ -5,34 +5,21 @@ import "./LandingPage.css";
 export default class LandingPage extends Component {
   render() {
     return (
-      <div className="Landing_Page">
-        <header role="banner">
+      <div className="landing_page">
+        <div className="intro">
           <h1>Production Tracker</h1>
-          <h2>
-            {" "}
-            Keep track of performance and detractors on your production work
-            centers
-          </h2>
-        </header>
-        <section>
-          <header>
-            <h3>Document Daily Production</h3>
-          </header>
-          <p>
-            [<em>placeholder for screenshot production data entry interface</em>
-            ]
-          </p>
+          <p> Keep track of performance on your production work centers</p>
+        </div>
+        <section className="feature-1">
+          <h2>Document Daily Production</h2>
           <p>
             {" "}
-            Production Tracker helps you become aware the performance of a
-            workcenter versus its goal and allow the user to document what is
-            preventing it from achieving the goal.
+            Production Tracker assist on keeping track of the performance of a
+            production workcenter.
           </p>
         </section>
         <section>
-          <header>
-            <h3>Record Production Hourly</h3>
-          </header>
+          <h2>Record Production Hourly</h2>
           <p>
             [
             <em>
@@ -47,9 +34,7 @@ export default class LandingPage extends Component {
           </p>
         </section>
         <section>
-          <header>
-            <h3>Keep track of your progress</h3>
-          </header>
+          <h2>Keep track of your progress</h2>
           <p>
             [<em>placeholder for screenshot of production stats UI</em>]
           </p>

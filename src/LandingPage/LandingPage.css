@@ -1,0 +1,30 @@
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: NeueMontreal;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  color: #fffffe;
+  line-height: 1;
+  margin: 0;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.intro {
+  display: flex;
+  padding-top: 15px;
+  flex-wrap: wrap;
+  font-size: 18px;
+}
+
+.feature-1 {
+  background-color: rgba(0, 0, 0, 0);
+}

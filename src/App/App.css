@@ -2,10 +2,12 @@
   box-sizing: border-box;
 }
 
-nav,
-footer {
+nav {
   padding: 1% 0;
-  background-color: #aaa;
+  background-color: #0a1b2b;
+}
+h1 {
+  font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
 }
 
 nav {
@@ -20,4 +22,18 @@ nav {
   flex-direction: column;
   justify-content: center;
   padding: 45px 15px;
+}
+footer {
+  font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
+  font-style: italic;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #0a1b2b;
+  font-size: 10px;
+}
+.credit-icons > a {
+  text-decoration: none;
+  color: #fffffe;
+  cursor: pointer;
 }
