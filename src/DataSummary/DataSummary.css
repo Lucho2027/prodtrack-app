@@ -1,7 +1,37 @@
 .data-summary {
-	padding-top: 20%;
+  padding-top: 20%;
 }
 .data-item {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
+}
+.ending {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.todataentry-summ {
+  margin-top: 15px;
+  font-size: 15px;
+  width: 193.48px;
+  height: 49px;
+  padding: 13px 29px;
+  text-align: center;
+  background-color: #fdb515;
+  border: 1px solid #fdb515;
+  font-weight: 500;
+  color: #0a1b28;
+  text-decoration: none;
+  border-radius: 28px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+.todataentry-summ:hover {
+  background-color: #0a1b28;
+  border: 1px solid #fdb515;
+  font-weight: 500;
+  color: #fffffe;
+  text-decoration: none;
+  border-radius: 28px;
+  cursor: pointer;
 }
