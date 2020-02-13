@@ -1,7 +1,22 @@
 .daily-summary {
   display: flex;
-  border: 1px black dashed;
+  border: 1px solid #f2a516;
+  border-radius: 8px;
+  margin: 5px;
+  font-size: 14px;
+  color: #fffffe;
 }
-p {
+.date {
+  position: absolute;
+}
+.delete-data-button {
   font-size: 10px;
+  height: 20px;
+  width: 20px;
+}
+.delete-data-button {
+  color: #f27d72;
+}
+.edit-data-button {
+  color: #34bf98;
 }
