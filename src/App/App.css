@@ -37,3 +37,7 @@ footer {
   color: #fffffe;
   cursor: pointer;
 }
+::selection {
+  background-color: #fdb515;
+  color: #0a1b2b;
+}

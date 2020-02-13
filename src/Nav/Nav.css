@@ -21,6 +21,8 @@
 }
 
 .menu-items {
+  font-family: NeueMontreal, Helvetica Neue;
+  font-weight: 500;
   width: 20vw;
   position: absolute;
   top: 6vh;
@@ -32,7 +34,7 @@
   width: 100%;
   flex-direction: column;
   margin: 0;
-  background-color: rgba(10, 25, 38, 0.45);
+  background-color: rgba(10, 25, 38, 0.75);
   padding-top: 15px;
   left: 0vw;
 }
@@ -56,4 +58,9 @@
   width: 25px;
   height: 25px;
   margin-right: 2.5px;
+}
+
+h5.app-name {
+  font-family: NeueMontreal, Helvetica Neue;
+  color: #fffffe;
 }

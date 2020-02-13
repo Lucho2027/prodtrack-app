@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import "./LandingPage.css";
 
@@ -7,43 +8,48 @@ export default class LandingPage extends Component {
     return (
       <div className="landing_page">
         <div className="intro">
-          <h1>Production Tracker</h1>
-          <p> Keep track of performance on your production work centers</p>
+          <div className="left-intro">
+            <h1 className="header-intro">Production Tracker</h1>
+          </div>
         </div>
-        <section className="feature-1">
-          <h2>Document Daily Production</h2>
-          <p>
+        <div className="right-intro">
+          <p className="content-intro">
             {" "}
-            Production Tracker assist on keeping track of the performance of a
-            production workcenter.
+            Make accessible and track performance of production output.
           </p>
-        </section>
-        <section>
-          <h2>Record Production Hourly</h2>
-          <p>
-            [
-            <em>
-              placeholder for screenshot of production recording interface
-            </em>
-            ]
-          </p>
-          <p>
-            The key to improvement is to consistently document your production
-            performance and the detractors that prevent the area from achieving
-            production output goal.
-          </p>
-        </section>
-        <section>
-          <h2>Keep track of your progress</h2>
-          <p>
-            [<em>placeholder for screenshot of production stats UI</em>]
-          </p>
-          <p>
-            Interactive charts and statistics help the engineering team
-            prioritize resources to attack most common detractors and
-            continously improve the area and the process.
-          </p>
-        </section>
+        </div>
+
+        <div className="feature-1">
+          <div className="right-feature-1">
+            <h1 className="header-feature-1">Document Daily Production</h1>
+          </div>
+          <div className="left-feature-1">
+            <p className="content-feature-1">
+              {" "}
+              The key to improvement is to consistently document your production
+              performance. Keeping track of detractors that prevent optimal
+              performance.
+            </p>
+          </div>
+        </div>
+        <div className="feature-2">
+          <div className="left-feature-2">
+            <h1 className="header-feature-2">Record Production Hourly</h1>
+          </div>
+          <div className="right-feature-2">
+            <p className="content-feature-2">
+              Go to the Data entry form and start recording your production and
+              downtime. This will help management understand where the
+              engineering and support resources need to be focused on.
+            </p>
+          </div>
+          <div className="button-to-dataentry">
+            <Link className="link" to="/dataentry">
+              {" "}
+              <button className="todataentry"> Let's Give it a try</button>
+            </Link>
+          </div>
+        </div>
       </div>
     );
   }
