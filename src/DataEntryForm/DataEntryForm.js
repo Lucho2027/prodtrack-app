@@ -169,94 +169,128 @@ export default class DataEntryForm extends Component {
     let list = [];
     for (i = 1; i < 9; i++) {
       list.push(
-        <div key={i} className="form-section">
-          <label key={i} htmlFor="production-hour">
-            {" "}
-            {[i]}{" "}
+        <div key={i} className="form-section-hourly">
+          <label className="hour-label" key={i} htmlFor="production-hour">
+            {[i]}
           </label>
           <input
             key="goal-hour"
-            className="goal"
+            className="input-goal"
             type="number"
             name={"goal_" + i}
-            value="263"
+            value={263}
+            readOnly
           />
           <input
             key="produced-hour"
-            className="produced"
+            className="input-produced"
             type="number"
             name={"produced_" + i}
             placeholder="999"
+            defaultValue={0}
             onChange={e => this.onChange(e, i)}
           />{" "}
           <input
             key="downtime-hour"
-            className="downtime"
+            className="input-downtime"
             type="number"
             name={"downtime_" + [i]}
             placeholder="10"
+            defaultValue={0}
             min="0"
             max="60"
           />
           <input
             key="reason-hour"
-            className="reason"
+            className="input-reason"
             type="text"
             name={"reason_" + [i]}
-            placeholder="Downtime Reason"
+            placeholder="Reason"
           />
         </div>
       );
     }
 
     return (
-      <div className="data-entry__form">
-        <header>
-          <h1> Track your hourly production</h1>
-        </header>
-        <section>
-          <form id="record-porduction" onSubmit={this.onSubmit}>
-            <div className="form-section">
-              <label htmlFor="data-title">Hourly Recording </label>
-            </div>
-            <label htmlFor="date">Date</label>{" "}
-            <input required type="date" name="date" />
-            <label htmlFor="department">Department</label>{" "}
-            <input required type="number" name="department" />
-            <label htmlFor="shift">shift</label>{" "}
-            <input required type="number" name="shift" min={1} max={3} />
-            <div className="table-headers">
-              <h3>Goal (units)</h3>
-              <h3>Produced (units)</h3>
-              <h3>Downtime (minutes)</h3>
-            </div>
-            <div className="input-table">{list}</div>
-            <div className="summary-section">
-              <h4 className="production-date-header">
-                Summary of parts produced
-              </h4>
-              <label className="produced_sum">Total Produced</label>
-              <input type="number" name="produced" />
-              <label>Total Downtime</label>
-              <input
-                type="number"
-                name="date-month"
-                placeholder="01"
-                min="1"
-                max="999"
-                required=""
-              />
-            </div>
-            <button type="submit">Submit</button>
-            <button type="cancel" onClick={this.handleClickCancel}>
+      <div className="data-entry-form">
+        <div className="data-entry-header">
+          <h1 className="data-entry-header-text">
+            {" "}
+            Track your hourly production
+          </h1>
+        </div>
+        <form id="record-porduction" onSubmit={this.onSubmit}>
+          <div className="form-section">
+            <label className="form-input-date-label" htmlFor="date">
+              Date
+            </label>
+            <input
+              className="form-input-date"
+              required
+              type="date"
+              name="date"
+            />
+            <label className="form-input-department-label" htmlFor="department">
+              Department
+            </label>
+            <input
+              className="form-input-department"
+              required
+              type="number"
+              name="department"
+            />
+            <label className="form-input-shift-label" htmlFor="shift">
+              Shift
+            </label>
+            <input
+              className="form-input-shift"
+              required
+              type="number"
+              name="shift"
+              min={1}
+              max={3}
+            />
+          </div>
+
+          <label htmlFor="data-title">Hourly Recording </label>
+          <div className="table-headers">
+            <h3 className="goal-header">Goal (units)</h3>
+            <h3 className="produced-header">Produced (units)</h3>
+            <h3 className="downtime-header">Downtime (minutes)</h3>
+            <h3 className="reason-header">Reason</h3>
+          </div>
+          <div className="input-table">{list}</div>
+          <div className="summary-section">
+            <h4 className="summary-header">Summary of parts produced</h4>
+            <label className="produced-sum">Total Produced</label>
+            <input
+              className="input-produced-sum"
+              type="number"
+              name="produced"
+            />
+            <label className="downtime-sum">Total Downtime</label>
+            <input
+              className="input-downtime-sum"
+              type="number"
+              min="1"
+              max="999"
+            />
+            <label className="eff-calc">Efficiency</label>
+            <input className="input-eff" type="number" min="1" max="999" />
+          </div>
+          <div className="summary-button">
+            <button className="submit-button" type="submit">
+              Submit
+            </button>
+            <button
+              className="cancel-button"
+              type="cancel-button"
+              onClick={this.handleClickCancel}
+            >
               Cancel
             </button>
-          </form>
-          <Link to="/datasummary">
-            {" "}
-            <span> Go back to Summary</span>
-          </Link>
-        </section>
+          </div>
+        </form>
       </div>
     );
   }

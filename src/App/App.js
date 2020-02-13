@@ -91,39 +91,68 @@ export default class Apps extends Component {
         </ProdtrackContext.Provider>
         <footer>
           <div className="credit-icons">
-            Icons made by{" "}
-            <a href="https://www.flaticon.com/authors/ddara" title="dDara">
-              dDara
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
+            <p className="credit-icons-content">
+              Icons made by{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/authors/ddara"
+                title="dDara"
+              >
+                dDara
+              </a>{" "}
+              from{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/"
+                title="Flaticon"
+              >
+                www.flaticon.com
+              </a>
+            </p>
+            <p className="credit-icons-content">
+              Icons made by{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/authors/freepik"
+                title="Freepik"
+              >
+                Freepik
+              </a>{" "}
+              from{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/"
+                title="Flaticon"
+              >
+                www.flaticon.com
+              </a>
+            </p>
+            <p className="credit-icons-content">
+              Icons made by{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/authors/kiranshastry"
+                title="Kiranshastry"
+              >
+                Kiranshastry
+              </a>
+              from{" "}
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://www.flaticon.com/"
+                title="Flaticon"
+              >
+                www.flaticon.com
+              </a>
+            </p>
+            "Project created by Luis Rodriguez"
           </div>
-          <div>
-            Icons made by{" "}
-            <a href="https://www.flaticon.com/authors/freepik" title="Freepik">
-              Freepik
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
-          </div>
-          <div>
-            Icons made by{" "}
-            <a
-              href="https://www.flaticon.com/authors/kiranshastry"
-              title="Kiranshastry"
-            >
-              Kiranshastry
-            </a>{" "}
-            from{" "}
-            <a href="https://www.flaticon.com/" title="Flaticon">
-              www.flaticon.com
-            </a>
-          </div>
-          "Project created by Luis Rodriguez"
         </footer>
       </div>
     );

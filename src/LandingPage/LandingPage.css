@@ -81,18 +81,6 @@
 }
 
 .todataentry {
-  padding: 13px 29px;
-  text-align: center;
-  background-color: #fdb515;
-  border: 1px solid #fdb515;
-  font-weight: 500;
-  color: #0a1b28;
-  text-decoration: none;
-  border-radius: 28px;
-  cursor: pointer;
-}
-
-.todataentry {
   margin: 0px;
   font-size: 18px;
   width: 193.48px;
