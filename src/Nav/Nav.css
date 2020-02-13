@@ -1,22 +1,66 @@
-nav {
-	padding: 1% 0;
-	background-color: #aaa;
-	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 10;
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #0a1b2b;
+  color: #fdb515;
 }
-ul.nav-bar {
-	display: flex;
-	flex-direction: row;
-	justify-content: right;
-	padding-left: 0%;
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  height: 8vh;
 }
-li > a {
-	text-decoration: none;
+
+.menu-button {
+  cursor: pointer;
 }
-li {
-	list-style: none;
-	padding: 10px;
+
+.menu-items {
+  font-family: NeueMontreal, Helvetica Neue;
+  font-weight: 500;
+  width: 20vw;
+  position: absolute;
+  top: 6vh;
+  left: -25vw;
+  padding: 0px;
+}
+.menu-items.show {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgba(10, 25, 38, 0.75);
+  padding-top: 15px;
+  left: 0vw;
+}
+.menu-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 10px 16px;
+}
+.menu-link {
+  text-decoration: none;
+  color: #fffffe;
+}
+.name-logo {
+  display: flex;
+  align-items: center;
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+.logo {
+  width: 25px;
+  height: 25px;
+  margin-right: 2.5px;
+}
+
+h5.app-name {
+  font-family: NeueMontreal, Helvetica Neue;
+  color: #fffffe;
 }
