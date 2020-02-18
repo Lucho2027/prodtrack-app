@@ -2,41 +2,55 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  background-color: #0a1b2b;
   color: #fdb515;
 }
 
-.nav {
+.aliniense {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
   display: flex;
+  background-color: #0a1b2b;
   flex-direction: row;
   justify-content: space-between;
-  padding-top: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  height: 8vh;
+  align-items: center;
+  padding: 1.5vh;
+  width: 100%;
 }
 
+.logo {
+  position: relative;
+  width: 2rem;
+  height: 2rem;
+}
 .menu-button {
   cursor: pointer;
+  width: 2rem;
+  height: 2rem;
 }
 
 .menu-items {
-  font-family: NeueMontreal, Helvetica Neue;
   font-weight: 500;
   width: 20vw;
   position: absolute;
-  top: 6vh;
+  top: 8vh;
   left: -25vw;
   padding: 0px;
 }
 .menu-items.show {
+  position: fixed;
+  z-index: 10;
   display: flex;
   width: 100%;
   flex-direction: column;
   margin: 0;
-  background-color: rgba(10, 25, 38, 0.75);
-  padding-top: 15px;
+  background-color: rgba(10, 25, 38, 0.95);
+  margin-top: 1.65vh;
   left: 0vw;
+  right: -100vw;
+  transition: 0.4s;
 }
 .menu-list {
   list-style: none;
@@ -48,19 +62,53 @@
   text-decoration: none;
   color: #fffffe;
 }
-.name-logo {
-  display: flex;
-  align-items: center;
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-.logo {
-  width: 25px;
-  height: 25px;
-  margin-right: 2.5px;
-}
 
 h5.app-name {
-  font-family: NeueMontreal, Helvetica Neue;
+  font-family: Helvetica Neue;
+  font-weight: 900;
+  font-size: 4rem;
   color: #fffffe;
+  font-size: 4vh;
+  margin: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  h5.app-name {
+    font-family: Helvetica Neue;
+    font-weight: 900;
+    font-size: 5rem;
+    color: #fffffe;
+    font-size: 2.75rem;
+    margin: 0.25rem;
+  }
+  .logo {
+    position: relative;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .menu-items {
+    font-weight: 500;
+    width: 20vw;
+    position: absolute;
+    top: 14vh;
+    left: -25vw;
+    padding: 0px;
+  }
+  .menu-button {
+    cursor: pointer;
+    width: 2.75rem;
+    height: 2.75rem;
+  }
+  .menu-items.show {
+    position: fixed;
+    z-index: 10;
+    margin-top: -2vh;
+    transition: 0.4s;
+  }
+}
+@-moz-document url-prefix() {
+  .aliniense {
+    background-color: whitesmoke;
+    justify-content: space-between;
+  }
 }

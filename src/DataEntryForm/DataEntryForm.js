@@ -1,28 +1,87 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
-// import Proptypes from "prop-types"
 import ProdTrackContext from "../ProdtrackContext";
-import data from "../data.json";
 import config from "../config";
 
 import "./DataEntryForm.css";
 
 export default class DataEntryForm extends Component {
-  // static proptypes = {
-  // 	history: Proptypes.shape({
-  // 		push: Proptypes.func
-  // 	}).isRequired
-  // }
-
   static contextType = ProdTrackContext;
 
-  state = {
-    error: null
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      error: null,
+      data: {
+        date: 0,
+        department: 0,
+        shift: 0,
+        goal_1: 263,
+        produced_1: 0,
+        downtime_1: 0,
+        reason_1: "",
+        goal_2: 263,
+        produced_2: 0,
+        downtime_2: 0,
+        reason_2: "",
+        goal_3: 263,
+        produced_3: 0,
+        downtime_3: 0,
+        reason_3: "",
+        goal_4: 263,
+        produced_4: 0,
+        downtime_4: 0,
+        reason_4: "",
+        goal_5: 263,
+        produced_5: 0,
+        downtime_5: 0,
+        reason_5: "",
+        goal_6: 263,
+        produced_6: 0,
+        downtime_6: 0,
+        reason_6: "",
+        goal_7: 263,
+        produced_7: 0,
+        downtime_7: 0,
+        reason_7: "",
+        goal_8: 263,
+        produced_8: 0,
+        downtime_8: 0,
+        reason_8: ""
+      },
+      totalGoal: 0,
+      totalProduced: 0,
+      totalDowntime: 0,
+      eff: 0
+    };
+  }
 
-  onChange = (e, i) => {
-    const item = data[0];
-    item["produced_" + i] = e.target.value; //this will be moved to the state
+  sumData = () => {
+    const { data } = this.state;
+
+    let totalGoal = 0;
+    let totalProduced = 0;
+    let totalDowntime = 0;
+
+    for (let i = 1; i < 9; i++) {
+      totalGoal += data["goal_" + i];
+      totalProduced += data["produced_" + i];
+      totalDowntime += data["downtime_" + i];
+    }
+    let eff = Math.floor((totalProduced / totalGoal) * 100);
+    this.setState({
+      totalGoal: totalGoal,
+      totalProduced: totalProduced,
+      totalDowntime: totalDowntime,
+      eff: eff
+    });
+  };
+  onChange = ({ target }) => {
+    const name = target.name;
+    let data = { ...this.state.data };
+
+    data[name] = parseInt(target.value);
+    console.log(this.state.data[name]);
+    this.setState({ data }, this.sumData);
   };
   onSubmit = e => {
     e.preventDefault();
@@ -101,6 +160,7 @@ export default class DataEntryForm extends Component {
       downtime_8: parseInt(downtime_8.value),
       reason_8: reason_8.value
     };
+
     this.setState({ error: null });
     fetch(config.API_ENDPOINT, {
       method: "POST",
@@ -116,41 +176,6 @@ export default class DataEntryForm extends Component {
         return res.json();
       })
       .then(data => {
-        date.value = "";
-        department.value = "";
-        shift.value = "";
-        goal_1.value = "";
-        produced_1.value = "";
-        downtime_1.value = "";
-        reason_1.value = "";
-        goal_2.value = "";
-        produced_2.value = "";
-        downtime_2.value = "";
-        reason_2.value = "";
-        goal_3.value = "";
-        produced_3.value = "";
-        downtime_3.value = "";
-        reason_3.value = "";
-        goal_4.value = "";
-        produced_4.value = "";
-        downtime_4.value = "";
-        reason_4.value = "";
-        goal_5.value = "";
-        produced_5.value = "";
-        downtime_5.value = "";
-        reason_5.value = "";
-        goal_6.value = "";
-        produced_6.value = "";
-        downtime_6.value = "";
-        reason_6.value = "";
-        goal_7.value = "";
-        produced_7.value = "";
-        downtime_7.value = "";
-        reason_7.value = "";
-        goal_8.value = "";
-        produced_8.value = "";
-        downtime_8.value = "";
-        reason_8.value = "";
         this.context.addData(data);
         this.props.history.push("/datasummary");
       })
@@ -188,7 +213,7 @@ export default class DataEntryForm extends Component {
             name={"produced_" + i}
             placeholder="999"
             defaultValue={0}
-            onChange={e => this.onChange(e, i)}
+            onChange={e => this.onChange(e)}
           />{" "}
           <input
             key="downtime-hour"
@@ -199,6 +224,7 @@ export default class DataEntryForm extends Component {
             defaultValue={0}
             min="0"
             max="60"
+            onChange={e => this.onChange(e)}
           />
           <input
             key="reason-hour"
@@ -206,6 +232,7 @@ export default class DataEntryForm extends Component {
             type="text"
             name={"reason_" + [i]}
             placeholder="Reason"
+            onChange={e => this.onChange(e)}
           />
         </div>
       );
@@ -219,7 +246,7 @@ export default class DataEntryForm extends Component {
             Track your hourly production
           </h1>
         </div>
-        <form id="record-porduction" onSubmit={this.onSubmit}>
+        <form className="record-porduction" onSubmit={this.onSubmit}>
           <div className="form-section">
             <label className="form-input-date-label" htmlFor="date">
               Date
@@ -261,22 +288,19 @@ export default class DataEntryForm extends Component {
           </div>
           <div className="input-table">{list}</div>
           <div className="summary-section">
-            <h4 className="summary-header">Summary of parts produced</h4>
-            <label className="produced-sum">Total Produced</label>
-            <input
-              className="input-produced-sum"
-              type="number"
-              name="produced"
-            />
-            <label className="downtime-sum">Total Downtime</label>
-            <input
-              className="input-downtime-sum"
-              type="number"
-              min="1"
-              max="999"
-            />
-            <label className="eff-calc">Efficiency</label>
-            <input className="input-eff" type="number" min="1" max="999" />
+            <h4 className="summary-header">Summary</h4>
+            <label className="produced-sum">
+              Total Produced {this.state.totalProduced} units
+            </label>
+
+            <label className="downtime-sum">
+              Total Downtime {this.state.totalDowntime} minutes
+            </label>
+            <label className="goal-sum">
+              Total Goal {this.state.totalGoal} minutes
+            </label>
+
+            <label className="eff-calc">Efficiency {this.state.eff} %</label>
           </div>
           <div className="summary-button">
             <button className="submit-button" type="submit">

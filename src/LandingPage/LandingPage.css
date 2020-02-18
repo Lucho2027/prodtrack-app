@@ -2,25 +2,33 @@
   display: flex;
   flex-direction: column;
 }
+
+img {
+  position: absolute;
+  width: 25vh;
+  height: 30vh;
+}
 .intro {
   display: flex;
+  justify-content: center;
+  text-align: Center;
   padding-top: 25px;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 .left-intro {
   display: flex;
-  text-align: left;
+  text-align: Center;
   flex-direction: column;
 }
 
 .header-intro {
-  margin-top: 5px;
+  margin-top: 10vh;
   color: #fffffe;
 }
 .content-intro {
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.25rem;
   color: #b5bbbf;
   text-align: left;
 }
@@ -30,12 +38,12 @@
 .feature-1 {
   display: flex;
   flex-direction: column;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 
 .right-feature-1 {
   display: flex;
-  text-align: right;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -46,7 +54,7 @@
 .content-feature-1 {
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.25rem;
   color: #b5bbbf;
   text-align: left;
 }
@@ -57,11 +65,11 @@
   display: flex;
   flex-direction: column;
   padding-top: 25px;
-  font-size: 16px;
+  font-size: 1.5rem;
 }
 .left-feature-2 {
   display: flex;
-  text-align: left;
+  text-align: center;
   flex-direction: column;
 }
 
@@ -72,7 +80,7 @@
 .content-feature-2 {
   text-align: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 1.25rem;
   color: #b5bbbf;
   text-align: left;
 }
@@ -82,7 +90,7 @@
 
 .todataentry {
   margin: 0px;
-  font-size: 18px;
+  font-size: 1rem;
   width: 193.48px;
   height: 49px;
   padding: 13px 29px;

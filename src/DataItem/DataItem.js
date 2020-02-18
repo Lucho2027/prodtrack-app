@@ -1,9 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import PropTypes from "prop-types";
 import ProdtrackContext from "../ProdtrackContext";
 import config from "../config";
-import * as moment from "moment";
+import moment from "moment";
 import EditIcon from "@material-ui/icons/Edit";
 import DeleteIcon from "@material-ui/icons/Delete";
 
@@ -49,7 +48,7 @@ export default function DataItem(props) {
         return (
           <div className="daily-summary">
             <p className="date">
-              Date:{moment(item.data).format("MM/DD/YYYY")}
+              Date:{moment(item.date).format("MM/DD/YYYY")}
             </p>
             <p className="department">Dept. {item.department}</p>
             <p className="goal">Goal {totalGoal} </p>
@@ -73,7 +72,8 @@ export default function DataItem(props) {
     </ProdtrackContext.Consumer>
   );
 }
-//  class DataItem extends Component {
-// 	render() {
 
-// 	}
+DataItem.defaultProps = {
+  id: "",
+  item: {}
+};

@@ -1,18 +1,14 @@
 .data-summary {
-  padding-top: 20%;
+  padding-top: 10%;
 }
 .data-item {
   display: flex;
   flex-direction: column;
 }
-.ending {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+
 .todataentry-summ {
   margin-top: 15px;
-  font-size: 15px;
+  font-size: 1rem;
   width: 193.48px;
   height: 49px;
   padding: 13px 29px;
@@ -34,4 +30,17 @@
   text-decoration: none;
   border-radius: 28px;
   cursor: pointer;
+}
+p.date {
+  padding-bottom: 5px;
+  margin-left: 3px;
+}
+@media (min-width: 768px) {
+  p.date {
+    padding-bottom: 5px;
+    margin-left: 10px;
+  }
+  .data-summary {
+    padding-top: 10vh;
+  }
 }

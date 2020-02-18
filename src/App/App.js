@@ -74,9 +74,8 @@ export default class Apps extends Component {
 
     return (
       <div className="App">
-        <nav className="App__nav">
-          <Nav />
-        </nav>
+        <Nav />
+
         <ProdtrackContext.Provider value={contextValue}>
           <main className="App__main">
             <ProdTrackErrorBoundary>
@@ -89,70 +88,68 @@ export default class Apps extends Component {
             </ProdTrackErrorBoundary>
           </main>
         </ProdtrackContext.Provider>
-        <footer>
-          <div className="credit-icons">
-            <p className="credit-icons-content">
-              Icons made by{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/authors/ddara"
-                title="dDara"
-              >
-                dDara
-              </a>{" "}
-              from{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/"
-                title="Flaticon"
-              >
-                www.flaticon.com
-              </a>
-            </p>
-            <p className="credit-icons-content">
-              Icons made by{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/authors/freepik"
-                title="Freepik"
-              >
-                Freepik
-              </a>{" "}
-              from{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/"
-                title="Flaticon"
-              >
-                www.flaticon.com
-              </a>
-            </p>
-            <p className="credit-icons-content">
-              Icons made by{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/authors/kiranshastry"
-                title="Kiranshastry"
-              >
-                Kiranshastry
-              </a>
-              from{" "}
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://www.flaticon.com/"
-                title="Flaticon"
-              >
-                www.flaticon.com
-              </a>
-            </p>
-            "Project created by Luis Rodriguez"
-          </div>
+        <footer className="credit-icons">
+          <p className="credit-creator">Project created by Luis Rodriguez</p>
+          <p className="credit-icons-content">
+            Icons made by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/authors/ddara"
+              title="dDara"
+            >
+              dDara
+            </a>{" "}
+            from{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+            >
+              www.flaticon.com
+            </a>
+          </p>
+          <p className="credit-icons-content">
+            Icons made by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/authors/freepik"
+              title="Freepik"
+            >
+              Freepik
+            </a>{" "}
+            from{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+            >
+              www.flaticon.com
+            </a>
+          </p>
+          <p className="credit-icons-content">
+            Icons made by{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/authors/kiranshastry"
+              title="Kiranshastry"
+            >
+              Kiranshastry
+            </a>
+            from{" "}
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.flaticon.com/"
+              title="Flaticon"
+            >
+              www.flaticon.com
+            </a>
+          </p>
         </footer>
       </div>
     );
