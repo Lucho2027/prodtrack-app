@@ -1,41 +1,46 @@
 section {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 header {
-	padding-top: 20%;
-	padding-bottom: 0px;
+  padding-top: 20%;
+  padding-bottom: 0px;
 }
 
 div.form-section {
-	display: flex;
-	width: 100%;
-	justify-content: center;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.form-input-shift-label,
+.form-input-department-label,
+.form-input-date-label {
+  padding: 5px;
 }
 
 .table-headers {
-	display: flex;
-	flex-direction: row;
-	font-size: 10px;
-	padding-left: 25px;
+  display: flex;
+  flex-direction: row;
+  font-size: 10px;
+  padding-left: 25px;
 }
 
 .input-table {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .goal {
-	width: 33%;
+  width: 33%;
 }
 .produced {
-	width: 33%;
+  width: 33%;
 }
 .downtime {
-	width: 33%;
+  width: 33%;
 }
 
 .summary-section {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }

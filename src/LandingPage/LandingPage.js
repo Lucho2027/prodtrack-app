@@ -18,20 +18,6 @@ export default class LandingPage extends Component {
             Make accessible and track performance of production output.
           </p>
         </div>
-
-        <div className="feature-1">
-          <div className="right-feature-1">
-            <h1 className="header-feature-1">Document Daily Production</h1>
-          </div>
-          <div className="left-feature-1">
-            <p className="content-feature-1">
-              {" "}
-              The key to improvement is to consistently document your production
-              performance. Keeping track of detractors that prevent optimal
-              performance.
-            </p>
-          </div>
-        </div>
         <div className="feature-2">
           <div className="left-feature-2">
             <h1 className="header-feature-2">Record Production Hourly</h1>
@@ -43,6 +29,20 @@ export default class LandingPage extends Component {
               engineering and support resources need to be focused on.
             </p>
           </div>
+          <div className="feature-1">
+            <div className="right-feature-1">
+              <h1 className="header-feature-1">Document Daily Production</h1>
+            </div>
+            <div className="left-feature-1">
+              <p className="content-feature-1">
+                {" "}
+                The key to improvement is to consistently document your
+                production performance. Keeping track of detractors that prevent
+                optimal performance.
+              </p>
+            </div>
+          </div>
+
           <div className="button-to-dataentry">
             <Link className="link" to="/dataentry">
               {" "}

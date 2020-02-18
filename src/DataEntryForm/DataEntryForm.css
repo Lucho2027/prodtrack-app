@@ -1,3 +1,19 @@
+.data-entry-header-text {
+  margin-top: 15vh;
+  font-size: 3rem;
+}
+
+.input-table {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.form-section-hourly {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
 .data-entry-form {
   font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
   font-weight: 500;
@@ -18,57 +34,53 @@
   font-weight: 500;
   letter-spacing: 0.03em;
   text-align: left;
-  border: none;
   border-radius: 8px;
   mix-blend-mode: darken;
-  box-shadow: inset 0 -1px 0 rgba(10, 27, 43, 0.3);
   padding: 20px 0;
-  font-size: 15px;
   height: 35px;
   transition: 0.5s;
   padding: 5px;
   margin-left: 20px;
   margin-right: 20px;
-  background-color: inset 0 -1px 0 rgba(10, 27, 43, 0.3);
 }
 
-.input-table {
+.App__main {
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px 15px;
 }
-.form-section-hourly {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
+.form-input-shift-label,
+.form-input-department-label,
+.form-input-date-label {
+  font-size: 1.25rem;
 }
 .input-goal,
 .input-produced,
 .input-downtime,
 .input-reason {
   font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
-  font-weight: 500;
   margin: 5px;
   text-align: center;
-  letter-spacing: 0.03em;
+  background-color: ;
   text-align: center;
   border: none;
   border-radius: 8px;
   mix-blend-mode: darken;
-  box-shadow: inset 0 -1px 0 rgba(10, 27, 43, 0.3);
-  font-size: 12px;
+  font-size: 1.25rem;
   height: 35px;
   width: 25%;
   transition: 0.5s;
 }
+
 div.table-headers {
   display: flex;
+  justify-content: space-evenly;
   align-items: baseline;
   padding-left: 2px;
   padding-right: 2px;
   margin: 5px;
-  font-size: 12px;
+  font-size: 10px;
 }
 h3 {
   margin: 0;
@@ -80,26 +92,6 @@ h3 {
 .hour-label {
   margin-top: 8px;
 }
-.input-produced-sum,
-.input-downtime-sum,
-.input-eff {
-  font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  text-align: left;
-  border: none;
-  border-radius: 8px;
-  mix-blend-mode: darken;
-  box-shadow: inset 0 -1px 0 rgba(10, 27, 43, 0.3);
-  padding: 20px 0;
-  font-size: 15px;
-  height: 35px;
-  transition: 0.5s;
-  padding: 5px;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: inset 0 -1px 0 rgba(10, 27, 43, 0.3);
-}
 
 .summary-button {
   display: flex;
@@ -109,7 +101,7 @@ h3 {
 .submit-button,
 .cancel-button {
   margin: 15px;
-  font-size: 18px;
+  font-size: 1.25rem;
   width: 50%;
   height: 49px;
   padding: 13px 29px;
@@ -132,4 +124,50 @@ h3 {
   text-decoration: none;
   border-radius: 28px;
   cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  div.table-headers {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 2px;
+    padding-right: 2px;
+    margin: 5px;
+    font-size: 1rem;
+  }
+  .reason-header {
+    margin-right: 15px;
+  }
+
+  div.form-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  div.form-section-hourly {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .form-input-date,
+  .form-input-department,
+  .form-input-shift {
+    width: 25%;
+  }
+  .summary-header {
+    font-size: 1.5rem;
+  }
+  .summary-button {
+    display: flex;
+    justify-content: space-around;
+  }
+  .submit-button,
+  .cancel-button {
+    width: 30vh;
+  }
+  .produced-sum,
+  .downtime-sum,
+  .eff-calc {
+    font-size: 1.25rem;
+  }
 }

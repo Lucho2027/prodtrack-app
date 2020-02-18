@@ -3,7 +3,7 @@
   border: 1px solid #f2a516;
   border-radius: 8px;
   margin: 5px;
-  font-size: 14px;
+  font-size: 1rem;
   color: #fffffe;
 }
 .date {
@@ -19,4 +19,21 @@
 }
 .edit-data-button {
   color: #34bf98;
+}
+@media (min-width: 768px) {
+  .date {
+    position: absolute;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+  .daily-summary {
+    display: flex;
+    border: 1px solid #f2a516;
+    border-radius: 8px;
+    margin: 0.5rem;
+    font-size: 1.5rem;
+    color: #fffffe;
+    margin-left: 10vh;
+    margin-right: 10vh;
+  }
 }
