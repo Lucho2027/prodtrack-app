@@ -35,7 +35,7 @@
   letter-spacing: 0.03em;
   text-align: left;
   border-radius: 8px;
-  mix-blend-mode: darken;
+  mix-blend-mode: lighten;
   padding: 20px 0;
   height: 35px;
   transition: 0.5s;
@@ -54,6 +54,7 @@
 .form-input-department-label,
 .form-input-date-label {
   font-size: 1.25rem;
+  mix-blend-mode: lighten;
 }
 .input-goal,
 .input-produced,
@@ -71,6 +72,7 @@
   height: 35px;
   width: 25%;
   transition: 0.5s;
+  mix-blend-mode: lighten;
 }
 
 div.table-headers {

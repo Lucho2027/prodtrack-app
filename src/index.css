@@ -1,57 +1,59 @@
 body {
-	margin: 0;
-	-webkit-font-smoothing: antialiased;
-	background-color: #0a1b2b;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  background-color: #0a1b2b;
 }
 
 code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
-
-input::-webkit-textfield-decoration-container {
-	background-color: whitesmoke;
+input {
+  mix-blend-mode: lighten;
 }
 
 @-moz-document url-prefix() {
-	body {
-		background-color: whitesmoke;
-	}
-	* {
-		color: black !important;
-	}
-	nav {
-		background-color: whitesmoke;
-	}
-	input {
-		border: rgb(29, 29, 29) 1px solid;
-		border-radius: 8px;
-	}
-	.form-input-shift-label,
-	.form-input-department-label,
-	.form-input-date-label {
-		font-size: 1.25rem;
-		margin: 05px;
-	}
-	.menu-items.show {
-		background-color: whitesmoke;
-	}
-	.input-goal,
-	.input-produced,
-	.input-downtime,
-	.input-reason {
-		font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
-		margin: 5px;
-		text-align: center;
-		border: 1px solid black;
-		border-radius: 8px;
-		mix-blend-mode: darken;
-		font-size: 1.25rem;
-		height: 35px;
-		width: 25%;
-		transition: 0.5s;
-	}
-	footer {
-		background-color: whitesmoke;
-	}
+  body {
+    background-color: whitesmoke;
+  }
+  * {
+    color: black !important;
+  }
+  nav {
+    background-color: whitesmoke;
+  }
+  input::-webkit-textfield-decoration-container {
+    background-color: whitesmoke;
+  }
+  input {
+    border: rgb(29, 29, 29) 1px solid;
+    border-radius: 8px;
+  }
+  .form-input-shift-label,
+  .form-input-department-label,
+  .form-input-date-label {
+    font-size: 1.25rem;
+    margin: 05px;
+  }
+  .menu-items.show {
+    background-color: whitesmoke;
+  }
+  .input-goal,
+  .input-produced,
+  .input-downtime,
+  .input-reason {
+    font-family: NeueMontreal, Helvetica Neue, Helvetica, Arial, "sans-serif";
+    margin: 5px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    mix-blend-mode: darken;
+    font-size: 1.25rem;
+    height: 35px;
+    width: 25%;
+    transition: 0.5s;
+  }
+  footer {
+    background-color: whitesmoke;
+  }
 }
