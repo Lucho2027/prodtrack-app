@@ -15,7 +15,6 @@ code {
   }
   * {
     color: black !important;
-    background-color: whitesmoke;
   }
   nav {
     background-color: whitesmoke;
@@ -29,6 +28,9 @@ code {
   .form-input-date-label {
     font-size: 1.25rem;
     margin: 05px;
+  }
+  .menu-items.show {
+    background-color: whitesmoke;
   }
   .input-goal,
   .input-produced,
