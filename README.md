@@ -16,7 +16,7 @@ ProdTrack has been created as my first Full-Stack Capstone Project for Thinkful 
 
 ## Live Site
 
-You can find Park finder at https://prodtrack-app.lucho2027.now.sh/
+You can find ProdTrack at https://prodtrack-app.lucho2027.now.sh/
 
 ## Summary
 
