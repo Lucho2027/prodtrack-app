@@ -106,9 +106,3 @@ h5.app-name {
     transition: 0.4s;
   }
 }
-@-moz-document url-prefix() {
-  .aliniense {
-    background-color: whitesmoke;
-    justify-content: space-between;
-  }
-}

@@ -8,6 +8,9 @@ img {
   width: 25vh;
   height: 30vh;
 }
+ul.features {
+  list-style: none;
+}
 .intro {
   display: flex;
   justify-content: center;

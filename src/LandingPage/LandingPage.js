@@ -15,7 +15,18 @@ export default class LandingPage extends Component {
         <div className="right-intro">
           <p className="content-intro">
             {" "}
-            Make accessible and track performance of production output.
+            The key to continuous improvement is to consistently document your
+            production performance. Use ProdTrack to:
+            <ul className="features">
+              <li>-Document your hourly output.</li>
+              <li>
+                -Track Downtime to identify root cause for efficiency
+                detractors.{" "}
+              </li>
+              <li>
+                -Provide justification for continuous improvement projects.
+              </li>
+            </ul>
           </p>
         </div>
         <div className="feature-2">
@@ -24,9 +35,9 @@ export default class LandingPage extends Component {
           </div>
           <div className="right-feature-2">
             <p className="content-feature-2">
-              Go to the Data entry form and start recording your production and
-              downtime. This will help management understand where the
-              engineering and support resources need to be focused on.
+              Keep a log of your production rate by documenting your hourly
+              output on the "Data Entry" section. Use the "Data Summary" section
+              to glance at the department performance on a daily basis.
             </p>
           </div>
           <div className="feature-1">
@@ -36,9 +47,9 @@ export default class LandingPage extends Component {
             <div className="left-feature-1">
               <p className="content-feature-1">
                 {" "}
-                The key to improvement is to consistently document your
-                production performance. Keeping track of detractors that prevent
-                optimal performance.
+                Go to the Data entry form and start recording your production
+                and downtime. This will help the organization focus its
+                resources to achieve operational excellence.
               </p>
             </div>
           </div>
