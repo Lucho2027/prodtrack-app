@@ -80,7 +80,6 @@ export default class DataEntryForm extends Component {
     let data = { ...this.state.data };
 
     data[name] = parseInt(target.value);
-    console.log(this.state.data[name]);
     this.setState({ data }, this.sumData);
   };
   onSubmit = e => {
@@ -180,7 +179,6 @@ export default class DataEntryForm extends Component {
         this.props.history.push("/datasummary");
       })
       .catch(error => {
-        console.log(error);
         this.setState({ error });
       });
   };

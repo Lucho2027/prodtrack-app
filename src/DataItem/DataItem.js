@@ -50,10 +50,10 @@ export default function DataItem(props) {
             <p className="date">
               Date:{moment(item.date).format("MM/DD/YYYY")}
             </p>
-            <p className="department">Dept. {item.department}</p>
+            <p className="department">Department {item.department}</p>
             <p className="goal">Goal {totalGoal} </p>
-            <p className="produced"> Prod. {totalProduced}</p>
-            <p className="downtime"> Downtm. {totalDowntime}</p>
+            <p className="produced"> Produced {totalProduced}</p>
+            <p className="downtime"> Downtime {totalDowntime}</p>
             <p className="efficiency">Eff. {eff} %</p>
             <div className="summary-buttons">
               <Link to={`/editdataentry/${item.id}`}>

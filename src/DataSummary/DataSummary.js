@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import ProdtrackContext from "../ProdtrackContext";
-import { Link } from "react-router-dom";
 import DataItem from "../DataItem/DataItem";
 
 import "./DataSummary.css";

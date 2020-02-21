@@ -6,8 +6,18 @@
   font-size: 1rem;
   color: #fffffe;
 }
+p.department,
+p.goal,
+p.produced,
+p.downtime,
+p.efficiency {
+  margin: 0.125rem;
+  font-size: 0.7rem;
+}
+
 .date {
   position: absolute;
+  margin: 2rem;
 }
 .delete-data-button {
   font-size: 10px;
@@ -23,8 +33,8 @@
 @media (min-width: 768px) {
   .date {
     position: absolute;
-    font-size: 1.2rem;
-    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    margin: 3rem;
   }
   .daily-summary {
     display: flex;
@@ -33,7 +43,27 @@
     margin: 0.5rem;
     font-size: 1.5rem;
     color: #fffffe;
-    margin-left: 10vh;
-    margin-right: 10vh;
+    margin-left: 20vh;
+    margin-right: 20vh;
+  }
+  p.department,
+  p.goal,
+  p.produced,
+  p.downtime,
+  p.efficiency {
+    font-size: 1rem;
+  }
+}
+@media (min-width: 1440px) {
+  .daily-summary {
+    margin-left: 30vh;
+    margin-right: 30vh;
+  }
+  p.department,
+  p.goal,
+  p.produced,
+  p.downtime,
+  p.efficiency {
+    font-size: 1rem;
   }
 }

@@ -16,18 +16,15 @@ export default class LandingPage extends Component {
           <p className="content-intro">
             {" "}
             The key to continuous improvement is to consistently document your
-            production performance. Use ProdTrack to:
-            <ul className="features">
-              <li>-Document your hourly output.</li>
-              <li>
-                -Track Downtime to identify root cause for efficiency
-                detractors.{" "}
-              </li>
-              <li>
-                -Provide justification for continuous improvement projects.
-              </li>
-            </ul>
+            production performance. Use ProdTrack to:{" "}
           </p>
+          <ul className="features">
+            <li>Document your hourly output.</li>
+            <li>
+              Track Downtime to identify root cause for efficiency detractors.{" "}
+            </li>
+            <li>Provide justification for continuous improvement projects.</li>
+          </ul>
         </div>
         <div className="feature-2">
           <div className="left-feature-2">

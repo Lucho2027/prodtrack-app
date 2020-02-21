@@ -10,6 +10,9 @@ img {
 }
 ul.features {
   list-style: none;
+  color: #fffffe;
+  line-height: rem;
+  padding: 0%;
 }
 .intro {
   display: flex;
@@ -32,8 +35,7 @@ ul.features {
   text-align: center;
   font-weight: 400;
   font-size: 1.25rem;
-  color: #b5bbbf;
-  text-align: left;
+  color: #fffffe;
 }
 .right-intro {
   margin: 25px;
@@ -58,8 +60,7 @@ ul.features {
   text-align: center;
   font-weight: 400;
   font-size: 1.25rem;
-  color: #b5bbbf;
-  text-align: left;
+  color: #fffffe;
 }
 .left-feature-1 {
   margin: 25px;
@@ -84,8 +85,7 @@ ul.features {
   text-align: center;
   font-weight: 400;
   font-size: 1.25rem;
-  color: #b5bbbf;
-  text-align: left;
+  color: #fffffe;
 }
 .right-feature-2 {
   margin: 25px;
